@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Philosophical Frameworks Database</title>
+  <title>Base de Datos de Marcos Filosóficos</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -172,14 +172,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>Philosophical Frameworks Database</h1>
+    <h1>Base de Datos de Marcos Filosóficos</h1>
     
     <div class="controls">
       <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search frameworks, figures or concepts...">
+        <input type="text" id="searchInput" placeholder="Buscar marcos, figuras o conceptos...">
       </div>
       <div>
-        <button id="toggleDetailsBtn">Show All Details</button>
+        <button id="toggleDetailsBtn">Mostrar Todos los Detalles</button>
       </div>
     </div>
     
@@ -189,25 +189,25 @@
           <tr>
             <th>
               <div class="header-content">
-                <span>Framework</span>
+                <span>Marco</span>
                 <button class="sort-button" data-sort="framework">⇅</button>
               </div>
             </th>
             <th class="detail-column hidden">
               <div class="header-content">
-                <span>Tradition</span>
+                <span>Tradición</span>
                 <button class="sort-button" data-sort="tradition">⇅</button>
               </div>
             </th>
-            <th class="detail-column hidden"><span>Period</span></th>
-            <th class="detail-column hidden"><span>Key Figures</span></th>
-            <th class="detail-column hidden"><span>Central Concept</span></th>
-            <th class="detail-column hidden"><span>Epistemology</span></th>
-            <th class="detail-column hidden"><span>Metaphysics</span></th>
-            <th class="detail-column hidden"><span>Ethics</span></th>
-            <th class="detail-column hidden"><span>Politics</span></th>
-            <th><span>Description</span></th>
-            <th class="action-column"><span>Actions</span></th>
+            <th class="detail-column hidden"><span>Período</span></th>
+            <th class="detail-column hidden"><span>Figuras Clave</span></th>
+            <th class="detail-column hidden"><span>Concepto Central</span></th>
+            <th class="detail-column hidden"><span>Epistemología</span></th>
+            <th class="detail-column hidden"><span>Metafísica</span></th>
+            <th class="detail-column hidden"><span>Ética</span></th>
+            <th class="detail-column hidden"><span>Política</span></th>
+            <th><span>Descripción</span></th>
+            <th class="action-column"><span>Acciones</span></th>
           </tr>
         </thead>
         <tbody>
@@ -217,252 +217,252 @@
     </div>
     
     <div class="footer" id="resultCounter">
-      Philosophical database - 0 frameworks shown of 20 total
+      Base de datos filosófica - 0 marcos mostrados de 20 en total
     </div>
   </div>
 
   <script>
-    // Philosophy data translated to English
+    // Philosophy data translated to Spanish
     const philosophyData = [
       { 
-        framework: "Utilitarianism", 
-        tradition: "Consequentialism",
-        period: "18th-19th Centuries", 
+        framework: "Utilitarismo", 
+        tradition: "Consecuencialismo",
+        period: "Siglos XVIII-XIX", 
         keyFigures: "Jeremy Bentham, John Stuart Mill, Peter Singer", 
-        centralConcept: "Greatest happiness/utility for the greatest number",
-        epistemology: "Empiricism",
-        metaphysics: "Generally naturalist",
-        ethics: "Action-based, consequentialist",
-        political: "Often liberal/progressive",
-        description: "Evaluates actions based on their outcomes and maximizing general welfare or happiness" 
+        centralConcept: "Mayor felicidad/utilidad para el mayor número",
+        epistemology: "Empirismo",
+        metaphysics: "Generalmente naturalista",
+        ethics: "Basada en acciones, consecuencialista",
+        political: "A menudo liberal/progresista",
+        description: "Evalúa las acciones basándose en sus resultados y maximizando el bienestar o la felicidad general" 
       },
       { 
-        framework: "Virtue Ethics", 
-        tradition: "Ancient Greek",
-        period: "Antiquity-Contemporary", 
-        keyFigures: "Aristotle, Alasdair MacIntyre, Martha Nussbaum", 
-        centralConcept: "Development of virtuous character traits",
-        epistemology: "Practical wisdom (phronesis)",
-        metaphysics: "Teleological",
-        ethics: "Character-based, virtue-centered",
-        political: "Community-oriented",
-        description: "Focuses on developing moral character and virtues rather than following rules or calculating consequences" 
+        framework: "Ética de la Virtud", 
+        tradition: "Griega Antigua",
+        period: "Antigüedad-Contemporáneo", 
+        keyFigures: "Aristóteles, Alasdair MacIntyre, Martha Nussbaum", 
+        centralConcept: "Desarrollo de rasgos virtuosos de carácter",
+        epistemology: "Sabiduría práctica (phronesis)",
+        metaphysics: "Teleológica",
+        ethics: "Basada en el carácter, centrada en la virtud",
+        political: "Orientada a la comunidad",
+        description: "Se centra en desarrollar el carácter moral y las virtudes en lugar de seguir reglas o calcular consecuencias" 
       },
       { 
-        framework: "Deontology", 
-        tradition: "Rationalism",
-        period: "18th century-present", 
+        framework: "Deontología", 
+        tradition: "Racionalismo",
+        period: "Siglo XVIII-presente", 
         keyFigures: "Immanuel Kant, W.D. Ross, Christine Korsgaard", 
-        centralConcept: "Categorical imperative, duty, moral law",
-        epistemology: "Rationalism",
-        metaphysics: "Dualist",
-        ethics: "Rule-based, duty-focused",
-        political: "Rights-based liberalism",
-        description: "Emphasizes universal moral principles, duty, and the inherent rightness or wrongness of actions regardless of consequences" 
+        centralConcept: "Imperativo categórico, deber, ley moral",
+        epistemology: "Racionalismo",
+        metaphysics: "Dualista",
+        ethics: "Basada en reglas, enfocada en el deber",
+        political: "Liberalismo basado en derechos",
+        description: "Enfatiza principios morales universales, el deber y la rectitud o maldad inherente de las acciones independientemente de las consecuencias" 
       },
       { 
-        framework: "Existentialism", 
+        framework: "Existencialismo", 
         tradition: "Continental",
-        period: "19th-20th Centuries", 
+        period: "Siglos XIX-XX", 
         keyFigures: "Søren Kierkegaard, Friedrich Nietzsche, Jean-Paul Sartre, Simone de Beauvoir", 
-        centralConcept: "Existence precedes essence, radical freedom",
-        epistemology: "Subjectivity, lived experience",
-        metaphysics: "Anti-essentialist",
-        ethics: "Authenticity, freedom, responsibility",
-        political: "Varied (individualist to Marxist)",
-        description: "Focuses on individual existence, freedom, choice, and responsibility in a world without inherent meaning" 
+        centralConcept: "La existencia precede a la esencia, libertad radical",
+        epistemology: "Subjetividad, experiencia vivida",
+        metaphysics: "Anti-esencialista",
+        ethics: "Autenticidad, libertad, responsabilidad",
+        political: "Variada (individualista a marxista)",
+        description: "Se centra en la existencia individual, la libertad, la elección y la responsabilidad en un mundo sin significado inherente" 
       },
       { 
-        framework: "Pragmatism", 
-        tradition: "American",
-        period: "Late 19th century-present", 
+        framework: "Pragmatismo", 
+        tradition: "Americana",
+        period: "Finales del siglo XIX-presente", 
         keyFigures: "Charles Sanders Peirce, William James, John Dewey, Richard Rorty", 
-        centralConcept: "Practical consequences, experimentation",
-        epistemology: "Anti-foundationalist, fallibilist",
-        metaphysics: "Naturalist, process-oriented",
+        centralConcept: "Consecuencias prácticas, experimentación",
+        epistemology: "Anti-fundamentalista, falibilista",
+        metaphysics: "Naturalista, orientada a procesos",
         ethics: "Experimental, social",
-        political: "Democratic, reformist",
-        description: "Evaluates theories or beliefs in terms of their practical application and success" 
+        political: "Democrática, reformista",
+        description: "Evalúa teorías o creencias en términos de su aplicación práctica y éxito" 
       },
       { 
-        framework: "Analytic Philosophy", 
-        tradition: "Anglo-American",
-        period: "20th century-present", 
+        framework: "Filosofía Analítica", 
+        tradition: "Anglo-Americana",
+        period: "Siglo XX-presente", 
         keyFigures: "Gottlob Frege, Bertrand Russell, Ludwig Wittgenstein, W.V.O. Quine", 
-        centralConcept: "Logical analysis, conceptual clarity",
-        epistemology: "Emphasis on logic and precision",
-        metaphysics: "Varied (realist to anti-realist)",
-        ethics: "Meta-ethics, language of morality",
-        political: "Generally liberal democratic",
-        description: "Emphasizes clarity, logical analysis, and precise use of language in addressing philosophical problems" 
+        centralConcept: "Análisis lógico, claridad conceptual",
+        epistemology: "Énfasis en lógica y precisión",
+        metaphysics: "Variada (realista a anti-realista)",
+        ethics: "Meta-ética, lenguaje de la moralidad",
+        political: "Generalmente democrática liberal",
+        description: "Enfatiza la claridad, el análisis lógico y el uso preciso del lenguaje al abordar problemas filosóficos" 
       },
       { 
-        framework: "Phenomenology", 
+        framework: "Fenomenología", 
         tradition: "Continental",
-        period: "20th century-present", 
+        period: "Siglo XX-presente", 
         keyFigures: "Edmund Husserl, Martin Heidegger, Maurice Merleau-Ponty", 
-        centralConcept: "Intentionality, lived experience, being-in-the-world",
-        epistemology: "First-person experience",
-        metaphysics: "Focus on phenomena as experienced",
-        ethics: "Embodied, situated morality",
-        political: "Varied",
-        description: "Studies the structures of consciousness as experienced from the first-person perspective" 
+        centralConcept: "Intencionalidad, experiencia vivida, ser-en-el-mundo",
+        epistemology: "Experiencia en primera persona",
+        metaphysics: "Enfoque en fenómenos como son experimentados",
+        ethics: "Moralidad encarnada, situada",
+        political: "Variada",
+        description: "Estudia las estructuras de la conciencia tal como se experimentan desde la perspectiva de primera persona" 
       },
       { 
-        framework: "Critical Theory", 
-        tradition: "Continental/Marxist",
-        period: "20th century-present", 
+        framework: "Teoría Crítica", 
+        tradition: "Continental/Marxista",
+        period: "Siglo XX-presente", 
         keyFigures: "Max Horkheimer, Theodor Adorno, Herbert Marcuse, Jürgen Habermas", 
-        centralConcept: "Critique of domination and ideology",
-        epistemology: "Dialectical, historically situated",
-        metaphysics: "Historical materialism",
-        ethics: "Emancipatory",
-        political: "Neo-Marxist, progressive",
-        description: "Examines and critiques society and culture, drawing on knowledge from social sciences and humanities" 
+        centralConcept: "Crítica de la dominación y la ideología",
+        epistemology: "Dialéctica, históricamente situada",
+        metaphysics: "Materialismo histórico",
+        ethics: "Emancipatoria",
+        political: "Neo-Marxista, progresista",
+        description: "Examina y critica la sociedad y la cultura, basándose en conocimientos de ciencias sociales y humanidades" 
       },
       { 
-        framework: "Stoicism", 
-        tradition: "Hellenistic",
-        period: "3rd century BCE-present", 
-        keyFigures: "Zeno of Citium, Seneca, Epictetus, Marcus Aurelius", 
-        centralConcept: "Virtue as only good, living according to nature",
-        epistemology: "Rationalism",
-        metaphysics: "Materialist, deterministic",
-        ethics: "Virtue-based, self-discipline",
-        political: "Cosmopolitan",
-        description: "Emphasizes virtue, reason, and self-control as means to overcome destructive emotions" 
+        framework: "Estoicismo", 
+        tradition: "Helenística",
+        period: "Siglo III a.C.-presente", 
+        keyFigures: "Zenón de Citio, Séneca, Epicteto, Marco Aurelio", 
+        centralConcept: "La virtud como único bien, vivir según la naturaleza",
+        epistemology: "Racionalismo",
+        metaphysics: "Materialista, determinista",
+        ethics: "Basada en la virtud, autodisciplina",
+        political: "Cosmopolita",
+        description: "Enfatiza la virtud, la razón y el autocontrol como medios para superar emociones destructivas" 
       },
       { 
-        framework: "Confucianism", 
-        tradition: "East Asian",
-        period: "5th century BCE-present", 
-        keyFigures: "Confucius, Mencius, Xunzi", 
-        centralConcept: "Social harmony, moral cultivation, filial piety",
-        epistemology: "Practical wisdom, tradition",
-        metaphysics: "Holistic, relational",
-        ethics: "Virtue-based, relational",
-        political: "Hierarchical, meritocratic",
-        description: "Emphasizes personal and governmental morality, correctness of social relationships, and family loyalty" 
+        framework: "Confucianismo", 
+        tradition: "Asia Oriental",
+        period: "Siglo V a.C.-presente", 
+        keyFigures: "Confucio, Mencio, Xunzi", 
+        centralConcept: "Armonía social, cultivo moral, piedad filial",
+        epistemology: "Sabiduría práctica, tradición",
+        metaphysics: "Holística, relacional",
+        ethics: "Basada en la virtud, relacional",
+        political: "Jerárquica, meritocrática",
+        description: "Enfatiza la moralidad personal y gubernamental, la corrección de las relaciones sociales y la lealtad familiar" 
       },
       { 
-        framework: "Buddhism", 
-        tradition: "Indian/Asian",
-        period: "5th century BCE-present", 
+        framework: "Budismo", 
+        tradition: "India/Asia",
+        period: "Siglo V a.C.-presente", 
         keyFigures: "Siddhartha Gautama, Nagarjuna, Thich Nhat Hanh", 
-        centralConcept: "Four Noble Truths, Eightfold Path, emptiness (sunyata)",
-        epistemology: "Direct insight, meditation",
-        metaphysics: "No-self (anatta), impermanence",
-        ethics: "Compassion, non-harm",
-        political: "Varied, often non-violent",
-        description: "Focuses on liberation from suffering through understanding the nature of reality and practicing mindfulness" 
+        centralConcept: "Cuatro Nobles Verdades, Camino Óctuple, vacuidad (sunyata)",
+        epistemology: "Intuición directa, meditación",
+        metaphysics: "No-yo (anatta), impermanencia",
+        ethics: "Compasión, no dañar",
+        political: "Variada, a menudo no violenta",
+        description: "Se centra en la liberación del sufrimiento a través de la comprensión de la naturaleza de la realidad y la práctica de la atención plena" 
       },
       { 
-        framework: "Postmodernism", 
+        framework: "Posmodernismo", 
         tradition: "Continental",
-        period: "Late 20th century", 
+        period: "Finales del siglo XX", 
         keyFigures: "Jacques Derrida, Michel Foucault, Jean Baudrillard, Judith Butler", 
-        centralConcept: "Critique of grand narratives, deconstruction",
-        epistemology: "Anti-foundationalist, relativist",
-        metaphysics: "Anti-essentialist",
-        ethics: "Context-dependent, power-aware",
-        political: "Critique of power structures",
-        description: "Skeptical of universal truths, emphasizes the role of language, power relations, and cultural context in shaping knowledge and values" 
+        centralConcept: "Crítica de grandes narrativas, deconstrucción",
+        epistemology: "Anti-fundamentalista, relativista",
+        metaphysics: "Anti-esencialista",
+        ethics: "Dependiente del contexto, consciente del poder",
+        political: "Crítica de estructuras de poder",
+        description: "Escéptico de verdades universales, enfatiza el papel del lenguaje, las relaciones de poder y el contexto cultural en la formación del conocimiento y los valores" 
       },
       { 
-        framework: "Naturalism", 
-        tradition: "Various",
-        period: "Antiquity to present", 
-        keyFigures: "Democritus, Baruch Spinoza, W.V.O. Quine, Daniel Dennett", 
-        centralConcept: "Natural world as all that exists",
-        epistemology: "Scientific method",
-        metaphysics: "Physicalist, materialist",
-        ethics: "Naturalized ethics",
-        political: "Science-informed politics",
-        description: "Considers natural properties, causes, and explanations sufficient to explain all phenomena without supernatural or spiritual elements" 
+        framework: "Naturalismo", 
+        tradition: "Varias",
+        period: "Antigüedad hasta el presente", 
+        keyFigures: "Demócrito, Baruch Spinoza, W.V.O. Quine, Daniel Dennett", 
+        centralConcept: "El mundo natural como todo lo que existe",
+        epistemology: "Método científico",
+        metaphysics: "Fisicalista, materialista",
+        ethics: "Ética naturalizada",
+        political: "Política informada por la ciencia",
+        description: "Considera que las propiedades, causas y explicaciones naturales son suficientes para explicar todos los fenómenos sin elementos sobrenaturales o espirituales" 
       },
       { 
-        framework: "Liberalism", 
-        tradition: "Western politics",
-        period: "17th century-present", 
+        framework: "Liberalismo", 
+        tradition: "Política occidental",
+        period: "Siglo XVII-presente", 
         keyFigures: "John Locke, John Stuart Mill, John Rawls, Martha Nussbaum", 
-        centralConcept: "Individual liberty, rights, equality",
-        epistemology: "Rationalism/empiricism",
-        metaphysics: "Varied",
-        ethics: "Rights-based",
-        political: "Constitutional democracy",
-        description: "Emphasizes individual rights, civil liberties, democracy, and equality of opportunity" 
+        centralConcept: "Libertad individual, derechos, igualdad",
+        epistemology: "Racionalismo/empirismo",
+        metaphysics: "Variada",
+        ethics: "Basada en derechos",
+        political: "Democracia constitucional",
+        description: "Enfatiza los derechos individuales, libertades civiles, democracia e igualdad de oportunidades" 
       },
       { 
-        framework: "Contractarianism", 
-        tradition: "Western politics",
-        period: "17th century-present", 
+        framework: "Contractualismo", 
+        tradition: "Política occidental",
+        period: "Siglo XVII-presente", 
         keyFigures: "Thomas Hobbes, John Locke, Jean-Jacques Rousseau, John Rawls", 
-        centralConcept: "Social contract, agreement among citizens",
-        epistemology: "Rationalism",
-        metaphysics: "Individualist",
-        ethics: "Agreement-based",
-        political: "Consent of the governed",
-        description: "Bases moral and political obligations on a contract or agreement between members of society" 
+        centralConcept: "Contrato social, acuerdo entre ciudadanos",
+        epistemology: "Racionalismo",
+        metaphysics: "Individualista",
+        ethics: "Basada en acuerdos",
+        political: "Consentimiento de los gobernados",
+        description: "Basa las obligaciones morales y políticas en un contrato o acuerdo entre los miembros de la sociedad" 
       },
       { 
-        framework: "Marxism", 
-        tradition: "Western politics/economics",
-        period: "19th century-present", 
+        framework: "Marxismo", 
+        tradition: "Política/economía occidental",
+        period: "Siglo XIX-presente", 
         keyFigures: "Karl Marx, Friedrich Engels, Antonio Gramsci, Herbert Marcuse", 
-        centralConcept: "Class struggle, historical materialism",
-        epistemology: "Dialectical materialism",
-        metaphysics: "Historical materialism",
-        ethics: "Class-based, emancipatory",
-        political: "Revolutionary socialism",
-        description: "Analyzes class relations, social conflict, and historical change through economic systems" 
+        centralConcept: "Lucha de clases, materialismo histórico",
+        epistemology: "Materialismo dialéctico",
+        metaphysics: "Materialismo histórico",
+        ethics: "Basada en clases, emancipatoria",
+        political: "Socialismo revolucionario",
+        description: "Analiza las relaciones de clase, el conflicto social y el cambio histórico a través de sistemas económicos" 
       },
       { 
-        framework: "Feminism", 
-        tradition: "Various",
-        period: "18th century-present", 
+        framework: "Feminismo", 
+        tradition: "Varias",
+        period: "Siglo XVIII-presente", 
         keyFigures: "Mary Wollstonecraft, Simone de Beauvoir, bell hooks, Judith Butler", 
-        centralConcept: "Gender equality, critique of patriarchy",
-        epistemology: "Standpoint theory, situated knowledge",
-        metaphysics: "Varied (social construction to materialism)",
-        ethics: "Ethics of care, liberation",
-        political: "Gender equality, women's rights",
-        description: "Critiques gender inequality and advocates for women's rights, interests, and issues" 
+        centralConcept: "Igualdad de género, crítica del patriarcado",
+        epistemology: "Teoría del punto de vista, conocimiento situado",
+        metaphysics: "Variada (construcción social a materialismo)",
+        ethics: "Ética del cuidado, liberación",
+        political: "Igualdad de género, derechos de la mujer",
+        description: "Critica la desigualdad de género y aboga por los derechos, intereses y problemas de las mujeres" 
       },
       { 
-        framework: "Rationalism", 
-        tradition: "Western",
-        period: "17th-18th centuries", 
+        framework: "Racionalismo", 
+        tradition: "Occidental",
+        period: "Siglos XVII-XVIII", 
         keyFigures: "René Descartes, Baruch Spinoza, Gottfried Wilhelm Leibniz", 
-        centralConcept: "Reason as primary source of knowledge",
-        epistemology: "A priori reasoning",
-        metaphysics: "Substance dualism or monism",
-        ethics: "Rational principles",
-        political: "Varied",
-        description: "Emphasizes reason and logic as primary sources of knowledge, rather than sensory experience" 
+        centralConcept: "La razón como fuente principal de conocimiento",
+        epistemology: "Razonamiento a priori",
+        metaphysics: "Dualismo o monismo de substancia",
+        ethics: "Principios racionales",
+        political: "Variada",
+        description: "Enfatiza la razón y la lógica como fuentes primarias de conocimiento, en lugar de la experiencia sensorial" 
       },
       { 
-        framework: "Empiricism", 
-        tradition: "Western",
-        period: "17th-18th centuries", 
+        framework: "Empirismo", 
+        tradition: "Occidental",
+        period: "Siglos XVII-XVIII", 
         keyFigures: "John Locke, George Berkeley, David Hume", 
-        centralConcept: "Knowledge derives from sensory experience",
-        epistemology: "Sensory experience",
-        metaphysics: "Skeptical of unobservable entities",
-        ethics: "Naturalist",
-        political: "Liberal, reformist",
-        description: "Holds that knowledge comes primarily from sensory experience rather than innate ideas or reason alone" 
+        centralConcept: "El conocimiento deriva de la experiencia sensorial",
+        epistemology: "Experiencia sensorial",
+        metaphysics: "Escéptico de entidades no observables",
+        ethics: "Naturalista",
+        political: "Liberal, reformista",
+        description: "Sostiene que el conocimiento proviene principalmente de la experiencia sensorial en lugar de ideas innatas o solo razón" 
       },
       { 
-        framework: "Idealism", 
-        tradition: "Western",
-        period: "18th-19th centuries", 
+        framework: "Idealismo", 
+        tradition: "Occidental",
+        period: "Siglos XVIII-XIX", 
         keyFigures: "Immanuel Kant, G.W.F. Hegel, F.H. Bradley", 
-        centralConcept: "Reality is mentally constructed or fundamentally mental",
-        epistemology: "Mind structures experience",
-        metaphysics: "Mind-dependent reality",
-        ethics: "Rational, universal",
-        political: "Varied (conservative to progressive)",
-        description: "Views reality as fundamentally mental, constructed by the mind, or otherwise non-material" 
+        centralConcept: "La realidad es mentalmente construida o fundamentalmente mental",
+        epistemology: "La mente estructura la experiencia",
+        metaphysics: "Realidad dependiente de la mente",
+        ethics: "Racional, universal",
+        political: "Variada (conservadora a progresista)",
+        description: "Ve la realidad como fundamentalmente mental, construida por la mente o de otra manera no material" 
       }
     ];
     
@@ -491,7 +491,7 @@
     
     toggleDetailsBtn.addEventListener('click', () => {
       showAllDetails = !showAllDetails;
-      toggleDetailsBtn.textContent = showAllDetails ? 'Compact View' : 'Show All Details';
+      toggleDetailsBtn.textContent = showAllDetails ? 'Vista Compacta' : 'Mostrar Todos los Detalles';
       
       detailColumns.forEach(col => {
         col.classList.toggle('hidden', !showAllDetails);
@@ -616,7 +616,7 @@
           
           const expandBtn = document.createElement('button');
           expandBtn.className = 'expand-btn';
-          expandBtn.textContent = expandedRows[index] ? 'Collapse' : 'Expand';
+          expandBtn.textContent = expandedRows[index] ? 'Contraer' : 'Expandir';
           expandBtn.setAttribute('data-index', index);
           
           actionCell.appendChild(expandBtn);
@@ -638,14 +638,14 @@
           detailsGrid.className = 'details-grid';
           
           const details = [
-            { label: 'Tradition', value: philosophy.tradition },
-            { label: 'Period', value: philosophy.period },
-            { label: 'Key Figures', value: philosophy.keyFigures, span: true },
-            { label: 'Central Concept', value: philosophy.centralConcept, span: true },
-            { label: 'Epistemology', value: philosophy.epistemology },
-            { label: 'Metaphysics', value: philosophy.metaphysics },
-            { label: 'Ethics', value: philosophy.ethics },
-            { label: 'Political Dimension', value: philosophy.political }
+            { label: 'Tradición', value: philosophy.tradition },
+            { label: 'Período', value: philosophy.period },
+            { label: 'Figuras Clave', value: philosophy.keyFigures, span: true },
+            { label: 'Concepto Central', value: philosophy.centralConcept, span: true },
+            { label: 'Epistemología', value: philosophy.epistemology },
+            { label: 'Metafísica', value: philosophy.metaphysics },
+            { label: 'Ética', value: philosophy.ethics },
+            { label: 'Dimensión Política', value: philosophy.political }
           ];
           
           details.forEach(detail => {
@@ -672,7 +672,7 @@
       });
       
       // Update counter
-      resultCounter.textContent = `Philosophical database - ${filteredData.length} frameworks shown of ${philosophyData.length} total`;
+      resultCounter.textContent = `Base de datos filosófica - ${filteredData.length} marcos mostrados de ${philosophyData.length} total`;
     }
     
     // Initial rendering
